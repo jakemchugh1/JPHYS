@@ -11,7 +11,7 @@ import java.io.InputStream;
 import static helpers.Artist.DrawQuadTex;
 import static helpers.Artist.LoadTexture;
 
-public class Ball implements Entity{
+public class Triangle implements Entity{
 
     private float x;
     private float y;
@@ -26,13 +26,13 @@ public class Ball implements Entity{
 
     private boolean remove;
 
-    public Ball(float startX, float startY){
+    public Triangle(float startX, float startY){
 
         this.x = startX;
         this.y = startY;
         width = 64;
         height = 64;
-        this.texture = LoadTexture("ball");
+        this.texture = LoadTexture("triangle");
 
         //initial position vector
         pos = new Vector2f();
@@ -68,7 +68,7 @@ public class Ball implements Entity{
         vel.y = vel.y + force.y;
 
         //temp bounce test
-        if(y > 960 && vel.y > 0) vel.y = -vel.y+0.2f;
+        if(y > 800 && vel.y > 0) vel.y = -vel.y+0.2f;
 
 
         //applying current velocity to position
