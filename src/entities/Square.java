@@ -68,7 +68,7 @@ public class Square implements Entity{
         vel.y = vel.y + force.y;
 
         //temp bounce test
-        if(y > 800 && vel.y > 0) vel.y = -vel.y+0.2f;
+        if(y > 896 && vel.y > 0) vel.y = -vel.y+0.2f;
 
 
         //applying current velocity to position
@@ -76,7 +76,7 @@ public class Square implements Entity{
         x = x + vel.x;
         y = y + vel.y;
 
-        if(vel.y > -0.1 && vel.y < 0.1 && pos.y > 800) remove = true;
+        if(vel.y > -0.1 && vel.y < 0.1 && pos.y > 896) remove = true;
 
         setPos();
     }
